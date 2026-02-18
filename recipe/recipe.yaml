@@ -41,8 +41,9 @@ requirements:
     - gnuconfig
   host:
     - root_base
-  run:
-    - root_base
+    - root_cxx_standard
+  run_exports:
+    - ${{ pin_subpackage("bayesian-analysis-toolkit", upper_bound="x.x.x") }}
 
 tests:
   - package_contents:
