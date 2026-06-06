@@ -15,7 +15,7 @@ source:
     - BAT-0.9.4.1-rootcling-flags.patch
 
 build:
-  number: 2
+  number: 3
   skip:
     - win
   script:
@@ -116,13 +116,13 @@ tests:
             - lib/libBATmodels.so
             - lib/libBATmtf.so
             - lib/libBATmvc.so
-        - if: osx and arm64
-          then:
-            - lib/gdk-pixbuf-2.0/*
-            - lib/graphviz/config8
-            - lib/gtk-3.0/*
-            - share/glib-2.0/*
-            - share/icons/hicolor/*
+            - if: arm64
+              then:
+                - lib/gdk-pixbuf-2.0/*
+                - lib/graphviz/config8
+                - lib/gtk-3.0/*
+                - share/glib-2.0/*
+                - share/icons/hicolor/*
 
 about:
   homepage: https://bat.github.io/bat/
